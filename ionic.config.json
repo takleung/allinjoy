@@ -1,0 +1,7 @@
+{
+    "name": "allinjoy",
+    "type": "custom",
+    "integrations": {
+      "cordova": {}
+    }
+}

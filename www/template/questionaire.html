@@ -1,0 +1,228 @@
+<style>
+.qcheckbox{
+width: 20px;
+height: 20px;
+margin-right: 5px;
+margin-top: 5px;
+float: left;
+display: block;
+}
+
+.qfloat{
+float: left;
+text-transform: none;
+/*
+text-transform: lowercase;
+text-transform: uppercase;
+text-transform: capitalize;
+*/
+}
+
+/*
+.qfloat span{
+color: red;
+opacity: 1;
+font-size: 20px;
+padding-left: 3px;
+}
+*/
+
+</style>
+
+<div class="header-clear"></div>
+
+  <h4 class="left-text uppercase mt20 tipsheader"><%= langPack.questionaire_header %></h4>
+  <p class="left-text tipsc">
+                  <%= langPack.questionaire_sub_header %>
+         <input type="button" class="buttonst" value="<%= langPack.questionaire_table_name_6_table_name %>" onclick = "saveQuestionaire()">
+  </p>
+
+          <div class="container">
+
+    <!-- Question 1 -->
+    <div class="formFieldWrap">
+    <label class="field-title contactNameField qfloat" for="contactNameField">
+    <%= langPack.questionaire_table_name_0_table_name %><span>*</span>
+    </label>
+        <select class="contactField requiredField" id="Q01">
+          <option value=""><%= langPack.questionaire_table_name_26_table_name %></option>
+          <option value="Appropriate"><%= langPack.questionaire_table_name_27_table_name %></option>
+          <option value="Difficiult"><%= langPack.questionaire_table_name_28_table_name %></option>
+          <option value="Easy"><%= langPack.questionaire_table_name_29_table_name %></option>
+        </select>
+    </div>
+    <!-- Question 1 -->
+
+    <!-- Question 2 -->
+    <div class="formFieldWrap">
+    <label class="field-title contactNameField qfloat" for="contactNameField">
+    <%= langPack.questionaire_table_name_1_table_name %><span>*</span>
+    </label>
+        <select class="contactField requiredField" id="Q02" onchange = "checkOther()">
+          <option value=""><%= langPack.questionaire_table_name_26_table_name %></option>
+          <option value="Y"><%= langPack.questionaire_table_name_30_table_name %></option>
+          <option value="N"><%= langPack.questionaire_table_name_31_table_name %></option>
+        </select>
+    </div>
+    <!-- Question 2 -->
+
+    <!-- Question 3 -->
+    <div class="formFieldWrap">
+    <label class="field-title contactNameField qfloat" for="contactNameField">
+    <%= langPack.questionaire_table_name_2_table_name %><span>*</span>
+    </label>
+        <select class="contactField requiredField" id="Q03" onchange = "checkOther()">
+          <option value=""><%= langPack.questionaire_table_name_26_table_name %></option>
+          <option value="1"><%= langPack.questionaire_table_name_34_table_name %></option>
+          <option value="2"><%= langPack.questionaire_table_name_35_table_name %></option>
+          <option value="3"><%= langPack.questionaire_table_name_36_table_name %></option>
+        </select>
+    </div>
+    <!-- Question 3 -->
+
+    <!-- Question 4 -->
+    <div class="formFieldWrap">
+    <label class="field-title contactNameField qfloat" for="contactNameField">
+    <%= langPack.questionaire_table_name_3_table_name %><span>*</span>
+    </label>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04A">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_7_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04B">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_8_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04C">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_9_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04D">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_10_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04E">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_11_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04F">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_12_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04G">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_13_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q04H">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_14_table_name %><span>*</span>
+      </label>
+    </div>
+    <!-- Question 4 -->
+
+    <!-- Question 5 -->
+    <div class="formFieldWrap">
+    <label class="field-title contactNameField qfloat" for="contactNameField">
+    <%= langPack.questionaire_table_name_4_table_name %><span>*</span>
+    </label>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05A">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_15_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05B">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_16_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05C">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_17_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05D">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_18_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05E">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_19_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05F">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_20_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05G">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_21_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05H">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_22_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05I">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_23_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05J">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_24_table_name %><span>*</span>
+      </label>
+    </div>
+    <div class="formFieldWrap_2f">
+      <input type="checkbox" name="contactNameField" value="" class="contactField requiredField qcheckbox" id="Q05K">
+      <label class="field-title contactNameField qfloat" for="contactNameField">
+      <%= langPack.questionaire_table_name_25_table_name %><span>*</span>
+      </label>
+    </div>
+    </div>
+    <!-- Question 5 -->
+
+    <!-- Question 6 -->
+    <div class="formFieldWrap">
+    <label class="field-title contactNameField qfloat" for="contactNameField">
+    <%= langPack.questionaire_table_name_5_table_name %><span>*</span>
+    </label>
+        <select class="contactField requiredField" id="Q06" onchange = "checkOther()">
+          <option value=""><%= langPack.questionaire_table_name_26_table_name %></option>
+          <option value="N"><%= langPack.questionaire_table_name_31_table_name %></option>
+          <option value="D"><%= langPack.questionaire_table_name_32_table_name %></option>
+          <option value="S"><%= langPack.questionaire_table_name_33_table_name %></option>
+        </select>
+        <input type="text" name="contactNameField" value="" class="contactField requiredField" id="Q06A">
+    </div>
+    <!-- Question 6 -->
+
+    </div>
+    <br/>

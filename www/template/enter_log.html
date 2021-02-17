@@ -1,0 +1,262 @@
+<style>
+.qfloat{
+float: left;
+text-transform: none;
+/*
+text-transform: lowercase;
+text-transform: uppercase;
+text-transform: capitalize;
+*/
+}
+
+.qfloat span{
+color: red;
+opacity: 1;
+font-size: 20px;
+padding-left: 3px;
+float: none !important;
+}
+
+.pdm{
+	width: 33%!important;
+	float: left;
+}
+
+.pdmc{
+	width: 31%!important;
+	margin-left: 1%;
+	margin-right: 1%;
+	float: left;
+}
+
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+</style>
+
+                <div class="header-clear"></div>
+
+				<h4 class="left-text uppercase mt20 tipsheader"><%= langPack.enter_log_header %></h4>
+				<p class="left-text tipsc" id = "enter_log_header">
+
+                </p>
+					 <div id = "dateResult"><%= langPack.enter_log_sub_header %></div>
+
+					<div class="formFieldWrap">
+
+               		<input type="date" name="selectionDayField" class = "contactField requiredField dateSelector" id="selectionDayField" onchange = "checkInvalidDate()">
+
+<!--                     <select class="contactField requiredField endata_1" id="selectionWeekField">
+					  <option value="01">1</option>
+					  <option value="02">2</option>
+					  <option value="03">3</option>
+					  <option value="04">4</option>
+					  <option value="05">5</option>
+					  <option value="06">6</option>
+					  <option value="07">7</option>
+					  <option value="08">8</option>
+					  <option value="09">9</option>
+					  <option value="10">10</option>
+					  <option value="11">11</option>
+					  <option value="12">12</option>
+					</select>
+ -->
+				  	<select class="contactField requiredField updata" id="selectEnterMode">
+						<option value="NORMAL"><%= langPack.menu_table_name_enter_log_2_table_name %></option>
+						<option value="INTERVAL"><%= langPack.enter_log_pull_down_menu_2_menu_name %></option>
+						<option value="LSDTEMPO"><%= langPack.enter_log_pull_down_menu_1_menu_name %></option>
+					</select>
+						<div onclick = "getWorkout()">
+<!-- 					 	 	<a href="#" class="submitbtn" id = "buttonFindLog" ><i class="fa fa-sign-in" onclick = "getWorkout()"></i>Find Log</a>
+
+ -->
+<!--  							<button id = "buttonFindLog" onclick = "getWorkout()">Find Log</a></button>
+ -->
+ 							<input id = "buttonFindLog" type="button" class="buttonst" value="<%= langPack.menu_table_name_enter_log_4_table_name %>" onclick = "getWorkout()">
+ 						</div>
+                    </div>
+
+                <div class="container">
+
+
+				  <!-- table -->
+				  <div class="container-fluid">
+				  	<div id = "enterLogPanel">
+					  <section id="no-more-tables">
+					    <table class="table-bordered table-striped table-condensed cf" id = "enterLogTableMain">
+						    <thead class="cf">
+								  <tr>
+									  <th><%= langPack.menu_table_name_enter_log_0_table_name %></th>
+									  <th class="numeric"><%= langPack.menu_table_name_enter_log_1_table_name %></th>
+									  <th class="numeric" id = "enter_log_table_name_4_table_name" ><%= langPack.enter_log_table_name_8_table_name %></th>
+									  <th class="numeric"><%= langPack.enter_log_table_name_7_table_name %></th>
+									  <th class="numeric"><%= langPack.menu_table_name_enter_log_3_table_name %></th>
+								  </tr>
+					      </thead>
+								<tbody id = "enterLogTable">
+
+								</tbody>
+					    </table>
+
+					    <div id  = "noRecordFindBanner">No Record Find</div>
+
+					  </section>
+					</div>
+
+					<div id ="intervalPanel">
+
+				          <div class="formFieldWrap">
+				          <label class="field-title contactNameField" for="contactNameField">
+				          <%= langPack.enter_log_table_name_3_table_name %>:<span>*</span>
+				          </label>
+				                    <input type="text" value="0" class="contactField requiredField" id="intervalMileage" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+
+				          <div class="formFieldWrap_nom">
+				          <label class="field-title contactNameField" for="contactNameField">
+				           <%= langPack.enter_log_table_name_5_table_name %>:<span>*</span>
+				          </label>
+
+                  <div class="clearfix"></div>
+				                    <select class="contactField requiredField pdm" id="intervalPace_HH"></select>
+				                    <select class="contactField requiredField pdmc" id="intervalPace_MM"></select>
+				                    <select class="contactField requiredField pdm" id="intervalPace_SS"></select>
+				                    </div>
+
+<!--
+
+				          <div class="formFieldWrap_2f">
+				    <input type="tel" name="txtNumber" value="0" class="contactField requiredField endata_2" id="intervalPaceMin" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+
+
+				          <div class="formFieldWrap_2">
+				    <input type="tel" name="txtNumber" value="0" class="contactField requiredField endata_1" id="intervalPaceSec" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+-->
+
+				          <div class="formFieldWrap_nom">
+				          <label class="field-title contactNameField" for="contactNameField">
+				           <%= langPack.enter_log_table_name_9_table_name %>:<span>*</span>
+				          </label>
+
+                  <div class="clearfix"></div>
+				                    <select class="contactField requiredField pdm" id="intervalRest_HH"></select>
+				                    <select class="contactField requiredField pdmc" id="intervalRest_MM"></select>
+				                    <select class="contactField requiredField pdm" id="intervalRest_SS"></select>
+				                    </div>
+<!--
+
+				          <div class="formFieldWrap_2f">
+				                     <input type="tel" name="txtNumber" value="0" class="contactField requiredField endata_2" id="intervalRestMin" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+
+
+				          <div class="formFieldWrap_2">
+				                     <input type="tel" name="txtNumber" value="0" class="contactField requiredField endata_1" id="intervalRestSec" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+-->
+
+<!-- 				      <button class="addbtn" id = "buttonAddInterval" onclick = "addNewInterval()">Add</button>
+ -->
+ 					<input type="button" class="buttonst" value="<%= langPack.menu_table_name_enter_log_5_table_name %>" onclick = "addNewInterval()">
+
+
+					  <section id="no-more-tables">
+					    <table class="table-bordered table-striped table-condensed cf" id = "intervalTableMain">
+						    <thead class="cf">
+								  <tr>
+									  <th class="numeric"><%= langPack.enter_log_table_name_3_table_name %></th>
+									  <th class="numeric"><%= langPack.enter_log_table_name_5_table_name %></th>
+									  <th class="numeric"><%= langPack.enter_log_table_name_9_table_name %></th>
+									  <td></th>
+								  </tr>
+					      </thead>
+								<tbody id = "intervalTable">
+
+								</tbody>
+					    </table>
+					  </section>
+
+<!-- 					  	<button id = "buttonSubmitInterval" onclick = "submitInterval()">Submit Interval</button>
+ -->					  	 <input id = "buttonSubmitInterval" type="button" class="buttonst" value="<%= langPack.menu_table_name_enter_log_6_table_name %>" onclick = "submitInterval()">
+
+					  </div>
+
+
+					<div id ="lSDTempoPanel">
+
+				          <div class="formFieldWrap">
+				          <label class="field-title contactNameField" for="contactNameField">
+				          <%= langPack.enter_log_table_name_3_table_name %>:<span>*</span>
+				          </label>
+				                    <input type="text" value="0" class="contactField requiredField" id="lSDTempoMileage" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+
+				          <div class="formFieldWrap_nom">
+				          <label class="field-title contactNameField" for="contactNameField">
+				          <%= langPack.enter_log_table_name_4_table_name %>:<span>*</span>
+				          </label>
+
+				          <div class="clearfix"></div>
+				                    <select class="contactField requiredField pdm" id="lSDTempoDuration_HH"></select>
+				                    <select class="contactField requiredField pdmc" id="lSDTempoDuration_MM"></select>
+				                    <select class="contactField requiredField pdm" id="lSDTempoDuration_SS"></select>
+				                    </div>
+
+<!--
+
+				          <div class="formFieldWrap_2f">
+				                     <input type="tel" name="txtNumber" value="0" class="contactField requiredField endata_2" id="lSDTempoDurationHr" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+
+
+				          <div class="formFieldWrap_2">
+				                     <input type="tel" name="txtNumber" value="0" class="contactField requiredField endata_1" id="lSDTempoDurationMin" onkeypress='return fun_AllowOnlyAmountAndDot(this.id);'>
+				                    </div>
+-->
+
+<!-- 					  	<button id = "buttonSubmitInterval" onclick = "submitInterval()">Submit Interval</button>
+ -->					  	 <input id = "buttonSubmitLSDTempo" type="button" class="buttonst" value="<%= langPack.menu_table_name_enter_log_7_table_name %>" onclick = "submitLSDTempo()">
+
+					  </div>
+
+				  	<div id = "resultPanel">
+					  <section id="no-more-tables">
+					    <table class="table-bordered table-striped table-condensed cf" id = "confirmLogTableMain">
+						    <thead class="cf">
+								  <tr>
+									  <th><%= langPack.enter_log_table_name_4_table_name %></th>
+									  <th class="numeric"><%= langPack.enter_log_table_name_3_table_name %></th>
+									  <th class="numeric"><%= langPack.enter_log_table_name_5_table_name %></th>
+								  </tr>
+					      </thead>
+								<tbody>
+									<tr>
+										<td class="tdheight_d" data-title="<%= langPack.enter_log_table_name_4_table_name %>" id ="totalDuration"></td>
+										<td class="tdheight_d" data-title="<%= langPack.enter_log_table_name_3_table_name %>" class="numeric" id = "totalMileage"></td>
+										<td class="tdheight_d" data-title="<%= langPack.enter_log_table_name_5_table_name %>" class="numeric" id = "totalPace"></td>
+									</tr>
+								</tbody>
+					    </table>
+					  </section>
+					 </div>
+
+<!--  						<button id = "buttonSubmitLog" onclick = "submitWorkout()">Submit Log</button>
+						<button id = "buttonUploadLog" onclick = "uploadWorkout()">Upload</button>
+						<button id = "buttonCancelLog" onclick = "cancelUpload()">Canel</button>
+ -->
+ 						<input id = "buttonSubmitLog" type="button" class="buttonst" value="Submit Log" onclick = "submitWorkout()">
+ 						<input id = "buttonUploadLog" type="button" class="buttonst" value="Upload" onclick = "uploadWorkout()">
+ 						<input id = "buttonCancelLog" type="button" class="buttonst" value="Canel" onclick = "cancelUpload()">
+
+				  </div>
+				  <!-- table -->
+
+
+                </div>

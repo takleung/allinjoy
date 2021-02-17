@@ -1,0 +1,58 @@
+      <div class="header-clear"></div>
+
+        <h4 class="left-text uppercase mt20 tipsheader"><%= langPack.training_profile_header %></h4>
+        <p class="left-text tipsc">
+                        <%= langPack.training_profile_sub_header %>
+               <input type="button" class="buttonst" value="Edit Running Profile" onclick = "enableRunningProfile()">
+        </p>
+
+                <div class="container">
+
+          <!-- Participant -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          Participant ID<span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="USER_ID">
+                    </div>
+          <!-- Participant -->
+
+          <!-- Event going to participate in SCM2017 -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          Event going to participate in SCM2017<span>*</span>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="COURSE_MILEAGE">
+            </div>
+          <!-- Event going to participate in SCM2017 -->
+
+          <!-- Weekly Mileage in the past month -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          Weekly Mileage in the past month (Km)<span>*</span>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="WEEKLY_MILEAGE_IN_THE_PAST_MONTH">
+            </div>
+          <!-- Weekly Mileage in the last week -->
+
+          <!-- Weekly LSD Pace in the last month -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          Your comfortable running pace in your long run<span>*</span>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LSD_PACE_IN_THE_PAST_MONTH">
+            </div>
+          <!-- Weekly LSD Pace in the last month -->
+
+          <!-- Your longest run in the last month -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          Your longest run in the past month (Km)<span>*</span>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LONGEST_LSD_MILEAGE_IN_THE_PAST_MONTH">
+            </div>
+          <!-- Your longest run in the past month -->
+
+    <input type="button" class="buttonst" value="Save Running Profile" onclick = "saveRunningProfile()">
+
+    </div>

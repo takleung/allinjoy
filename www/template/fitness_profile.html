@@ -1,0 +1,689 @@
+<style>
+.qfloat{
+float: left;
+text-transform: none;
+/*
+text-transform: lowercase;
+text-transform: uppercase;
+text-transform: capitalize;
+*/
+}
+
+.qfloat span{
+color: red;
+opacity: 1;
+font-size: 20px;
+padding-left: 3px;
+float: none !important;
+}
+
+.pdm{
+	width: 33%!important;
+	float: left;
+}
+
+.pdmc{
+	width: 31%!important;
+	margin-left: 1%;
+	margin-right: 1%;
+	float: left;
+}
+
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+</style>
+
+      <div class="header-clear"></div>
+
+        <h4 class="left-text uppercase mt20 tipsheader"><%= langPack.traning_plan_header %></h4>
+        <p class="left-text tipsc">
+                        <%= langPack.traning_plan_sub_header %>
+               <input type="button" class="buttonst" value="<%= langPack.menu_table_name_fitness_profile_0_table_name %>" onclick = "enableFitnessProfile()">
+        </p>
+
+                <div class="container">
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_0_table_name %></div>
+
+					<!-- datepicker1
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_3_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="datepicker1" onchange="calStartDate()">
+                    </div>
+
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_3_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="datepicker2">
+                    </div>
+          datepicker2 -->
+
+					<!-- Start with -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_43_table_name %> <span>*</span>
+          </label>
+                    <input type="date" name="contactNameField" value="" class="contactField requiredField requiredN" id="START_WITH">
+                    </div>
+          <!-- Start with -->
+
+          <!-- Race date -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField qfloat" for="contactNameField">
+          <%= langPack.traning_plan_table_name_44_table_name %> <span>*</span>
+          </label>
+                    <input type="date" name="contactNameField" value="" class="contactField requiredField requiredN" id="RACE_DATE"  onchange="calStartDate()">
+                    </div>
+          <!-- Race date -->
+
+          <!-- Participant -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_1_table_name %><span>*</span>
+          </label>
+              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="USER_ID">
+              </div>
+          <!-- Participant -->
+
+          <!-- Gender Male Female -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_2_table_name %> <span>*</span>
+          </label>
+          <select class="contactField requiredField" id="GENDER">
+            <option value="">Please Choose</option>
+            <option value="M">Male</option>
+            <option value="F">female</option>
+          </select>
+          </div>
+          <!-- Gender Male Female -->
+
+
+          <!-- Age -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_3_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="AGE">
+                    </div>
+          <!-- Age -->
+
+
+          <!-- Gender Male Female -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField qfloat" for="contactNameField">
+          <%= langPack.traning_plan_table_name_45_table_name %> <span>*</span>
+          </label>
+          <select class="contactField requiredField requiredS" id="COURSE">
+            <option value="">Please Choose</option>
+            <option value="10K">10K</option>
+            <option value="HALF">Half marathon</option>
+            <option value="FULL">Full marathon</option>
+          </select>
+          </div>
+          <!-- Gender Male Female -->
+
+
+          <!-- Weight -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_5_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="WEIGHT">
+                    </div>
+          <!-- Weight -->
+
+
+          <!-- Height -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_6_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="HEIGHT">
+                    </div>
+          <!-- Height -->
+
+          <!-- Week Run -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField qfloat" for="contactNameField">
+          <%= langPack.traning_plan_table_name_37_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField requiredN" id="WEEK_RUN">
+                    </div>
+          <!-- Week Run -->
+
+          <!-- Pace -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField qfloat" for="contactNameField">
+          <%= langPack.traning_plan_table_name_38_table_name %> <span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField requiredN" id="SPEED">
+                    </div>
+          <!-- Pace -->
+
+          <!-- Best time -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField qfloat" for="contactNameField">
+          <%= langPack.traning_plan_table_name_41_table_name %> <span>*</span>
+          </label>
+          			<div class="clearfix"></div>
+                    <!-- <input type="text" name="contactNameField" value="" class="contactField requiredField requiredF" id="BEST_TIME">-->
+                    <select class="contactField requiredField pdm" id="BEST_TIME_HH"></select>
+                    <select class="contactField requiredField pdmc" id="BEST_TIME_MM"></select>
+                    <select class="contactField requiredField pdm" id="BEST_TIME_SS"></select>
+                    </div>
+          <!-- Best time -->
+
+          <!-- Expect time -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField qfloat" for="contactNameField">
+          <%= langPack.traning_plan_table_name_42_table_name %> <span>*</span>
+          </label>
+          			<div class="clearfix"></div>
+                    <!-- <input type="text" name="contactNameField" value="" class="contactField requiredField requiredF" id="EXPECT_TIME">-->
+                    <select class="contactField requiredField pdm" id="EXPECT_TIME_HH"></select>
+                    <select class="contactField requiredField pdmc" id="EXPECT_TIME_MM"></select>
+                    <select class="contactField requiredField pdm" id="EXPECT_TIME_SS"></select>
+                    </div>
+          <!-- Expect time -->
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_7_table_name %></div>
+
+          <!-- Triceps (female) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_8_table_name %><span>*</span>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="TRICEPS">
+          <!-- <div id = "TRICEPS_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Triceps (female) -->
+
+
+          <!-- Adb(male) -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_9_table_name %><span>*</span>
+          </label>
+          <input type="text" name="contactNameField" value="" class="contactField requiredField" id="ABD">
+          <!-- <div id = "ABD_message" class = "warningMessage"></div> -->
+          </div>
+          <!-- Adb(male) -->
+
+
+          <!-- Suprallac (female) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_10_table_name %><span>*</span>
+          </label>
+          <input type="text" name="contactNameField" value="" class="contactField requiredField" id="SUPRAILLIAC">
+          <!-- <div id = "SUPRAILLIAC_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Suprallac (female) -->
+
+
+          <!-- Thigh (male & female) -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_11_table_name %><span>*</span>
+          </label>
+          <input type="text" name="contactNameField" value="" class="contactField requiredField" id="THIGH">
+          <!-- <div id = "THIGH_message" class = "warningMessage"></div> -->
+          </div>
+          <!-- Thigh (male & female) -->
+
+
+          <!-- Pectoral (Chest) (male) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_12_table_name %><span>*</span>
+          </label>
+          <input type="text" name="contactNameField" value="" class="contactField requiredField" id="PECTORAL_FOLD">
+          <!-- <div id = "PECTORAL_FOLD_message" class = "warningMessage"></div> -->
+          </div>
+          <!-- Pectoral (Chest) (male) -->
+
+
+          <!-- Percentage of body fat -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_13_table_name %><span>*</span>
+          </label>
+          <input type="text" name="contactNameField" value="" class="contactField requiredField" id="BODY_FAT_COMPOISITION">
+          <!-- <div id = "BODY_FAT_COMPOISITION_message" class = "warningMessage"></div> -->
+          </div>
+          <!-- Percentage of body fat -->
+
+
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_14_table_name %></div>
+
+          <!-- Resting HR (bpm) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_15_table_name %><span>*</span>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="RESTING_HR">
+            <!-- <div id = "RESTING_HR_message" class = "warningMessage"></div> -->
+            </div>
+          <!-- Resting HR (bpm) -->
+
+					<!-- BMI -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_4_table_name %>  <span>*</span>
+          </label>
+					<input type="text" name="contactNameField" value="" class="contactField requiredField" id="BMI">
+                    </div>
+					<!-- BMI -->
+
+          <!-- Blood Pressure SP(mm/Hg) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_16_table_name %>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="SP" onchange = "getAssessmentCheck('SP', 'assessmentSP')">
+            <!-- <div id = "SP_message" class = "warningMessage"></div> -->
+            </div>
+          <!-- Blood Pressure SP(mm/Hg) -->
+
+
+          <!-- Blood Pressure DP(mm/Hg) -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_17_table_name %>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="DP" onchange = "getAssessmentCheck('DP', 'assessmentDP')">
+            <!-- <div id = "DP_message" class = "warningMessage"></div> -->
+          </div>
+          <!-- Blood Pressure DP(mm/Hg) -->
+
+
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_18_table_name %></div>
+
+          <!-- 2.4k walk test (sec) -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_39_table_name %><span>*</span>
+          </label>
+          <div class="clearfix"></div>
+                    <!--<input type="text" name="contactNameField" value="" class="contactField requiredField requiredF" id="WALK_TEST1">-->
+                    <select class="contactField requiredField pdm" id="WALK_TEST1_HH"></select>
+                    <select class="contactField requiredField pdmc" id="WALK_TEST1_MM"></select>
+                    <select class="contactField requiredField pdm" id="WALK_TEST1_SS"></select>
+        <!-- <div id = "WALK_TEST1_message" class = "warningMessage"></div> -->
+                    </div>
+
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_40_table_name %><span>*</span>
+          </label>
+          <div class="clearfix"></div>
+                    <!--<input type="text" name="contactNameField" value="" class="contactField requiredField requiredF" id="WALK_TEST2">-->
+                    <select class="contactField requiredField pdm" id="WALK_TEST2_HH"></select>
+                    <select class="contactField requiredField pdmc" id="WALK_TEST2_MM"></select>
+                    <select class="contactField requiredField pdm" id="WALK_TEST2_SS"></select>
+        <!-- <div id = "WALK_TEST2_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- 2.4k walk test (sec) -->
+
+
+					<!-- VO2_MAX -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_46_table_name %>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="VO2_MAX">
+          </div>
+          <!-- VO2_MAX -->
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_20_table_name %></div>
+
+          <!-- Hamstring in degree RT -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_21_table_name %>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="R_HAMSTRING" onchange = "getAssessmentCheck('R_HAMSTRING', 'assessmentRightHamstring')">
+            <!-- <div id = "R_HAMSTRING_message" class = "warningMessage"></div> -->
+            </div>
+          <!-- Hamstring in degree RT -->
+
+
+          <!-- Hamstring in degree LT -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_22_table_name %>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="L_HAMSTRING" onchange = "getAssessmentCheck('L_HAMSTRING', 'assessmentLeftHamstring')">
+            <!-- <div id = "L_HAMSTRING_message" class = "warningMessage"></div> -->
+            </div>
+          <!-- Hamstring in degree LT -->
+
+
+          <!-- Calf RT -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_23_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="R_CALF" onchange = "getAssessmentCheck('R_CALF', 'assessmentRightCalf')">
+                    <!-- <div id = "R_CALF_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Calf RT -->
+
+
+          <!-- Claf LT -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_24_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="L_CALF" onchange = "getAssessmentCheck('L_CALF', 'assessmentLeftCalf')">
+                    <!-- <div id = "L_CALF_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Calf LT -->
+
+
+          <!-- Foot Print RT -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_25_table_name %>
+          </label>
+                  <input type="text" name="contactNameField" value="" class="contactField requiredField" id="R_FOOTPRINT" onchange = "getAssessmentCheck('R_FOOTPRINT', 'assessmentRightFootPrint')">
+        <!-- <div id = "R_FOOTPRINT_message" class = "warningMessage"></div> -->
+           </div>
+          <!-- Foot Print RT -->
+
+
+          <!-- Foot Print LT -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_26_table_name %>
+          </label>
+            <input type="text" name="contactNameField" value="" class="contactField requiredField" id="L_FOOTPRINT" onchange = "getAssessmentCheck('L_FOOTPRINT', 'assessmentLeftFootPrint')">
+        <!-- <div id = "L_FOOTPRINT_message" class = "warningMessage"></div> -->
+          </div>
+          <!-- Foot Print LT -->
+
+
+          <!-- Q angle RT -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_27_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="R_QANGLE" onchange = "getAssessmentCheck('R_QANGLE', 'assessmentRQAngle')">
+        <!-- <div id = "R_QANGLE_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Q angle RT -->
+
+
+          <!-- Q angle LT -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_28_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="L_QANGLE" onchange = "getAssessmentCheck('L_QANGLE', 'assessmentLQAngle')">
+        <!-- <div id = "L_QANGLE_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Q angle LT -->
+
+
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_29_table_name %></div>
+
+          <!-- H200m run (sec) -->
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_30_table_name %><span>*</span>
+          </label>
+          <div class="clearfix"></div>
+                    <!--<input type="text" name="contactNameField" value="" class="contactField requiredField requiredF" id="RUN_TEST1">-->
+                    <select class="contactField requiredField pdm" id="RUN_TEST1_HH"></select>
+                    <select class="contactField requiredField pdmc" id="RUN_TEST1_MM"></select>
+                    <select class="contactField requiredField pdm" id="RUN_TEST1_SS"></select>
+        <!-- <div id = "RUN_TEST1_message" class = "warningMessage"></div> -->
+                    </div>
+
+          <div class="formFieldWrap">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_31_table_name %><span>*</span>
+          </label>
+          <div class="clearfix"></div>
+                    <!--<input type="text" name="contactNameField" value="" class="contactField requiredField requiredF" id="RUN_TEST2">-->
+                    <select class="contactField requiredField pdm" id="RUN_TEST2_HH"></select>
+                    <select class="contactField requiredField pdmc" id="RUN_TEST2_MM"></select>
+                    <select class="contactField requiredField pdm" id="RUN_TEST2_SS"></select>
+        <!-- <div id = "RUN_TEST2_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- 200m run (sec) -->
+
+          <div class="sbheader"><%= langPack.traning_plan_table_name_32_table_name %></div>
+
+          <!-- Back extensor (sec) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_33_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="BACK_EXTENSOR" onchange = "getAssessmentCheck('BACK_EXTENSOR', 'assessmentBackExtensor')">
+        <!-- <div id = "BACK_EXTENSOR_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Back extensor (sec) -->
+
+
+          <!-- Back flexor (sec)   -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_34_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="BACK_FLEXOR" onchange = "getAssessmentCheck('BACK_FLEXOR', 'assessmentBackFlexor')">
+        <!-- <div id = "BACK_FLEXOR_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Back flexor (sec)   -->
+
+
+          <!-- Right back side flexor (sec) -->
+          <div class="formFieldWrap_2f">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_35_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="R_BACK_SIDE_FLEXOR" onchange = "getAssessmentCheck('R_BACK_SIDE_FLEXOR', 'assessmentRightBackSideFlexor')">
+        <!-- <div id = "R_BACK_SIDE_FLEXOR_message" class = "warningMessage"></div> -->
+                    </div>
+          <!-- Right back side flexor (sec) -->
+
+          <!--Right back side flexor (sec)   -->
+          <div class="formFieldWrap_2">
+          <label class="field-title contactNameField" for="contactNameField">
+          <%= langPack.traning_plan_table_name_36_table_name %>
+          </label>
+                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="L_BACK_SIDE_FLEXOR" onchange = "getAssessmentCheck('L_BACK_SIDE_FLEXOR', 'assessmentLeftBackSideFlexor')">
+        <!-- <div id = "L_BACK_SIDE_FLEXOR_message" class = "warningMessage"></div> -->
+                    </div>
+
+						<div class="sbheader"><%= langPack.traning_plan_table_name_63_table_name %></div>
+
+						<!-- HR_MAX -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_69_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="HR_MAX">
+	              </div>
+	          <!-- HR_MAX -->
+						<!-- BR_MAX -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_70_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="BR_MAX">
+	              </div>
+	          <!-- BR_MAX -->
+						<!-- TV_MAX -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_71_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="TV_MAX">
+	              </div>
+	          <!-- TV_MAX -->
+						<!-- GRADIENT -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_64_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="GRADIENT">
+	              </div>
+	          <!-- GRADIENT -->
+						<!-- TRAINING_SPEED -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_49_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="SUGGESTED_SPEED">
+	              </div>
+	          <!-- TRAINING_SPEED -->
+						<!-- VO2_AT -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_65_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="VO2_AT">
+	              </div>
+	          <!-- VO2_AT -->
+						<!-- HR_AT -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_66_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="HR_AT">
+	              </div>
+	          <!-- HR_AT -->
+						<!-- BR_AT -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_67_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="BR_AT">
+	              </div>
+	          <!-- BR_AT -->
+						<!-- TV_AT -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_68_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="TV_AT">
+	              </div>
+	          <!-- TV_AT -->
+
+
+						<div class="sbheader"><%= langPack.traning_plan_table_name_50_table_name %></div>
+
+	          <!-- KNEE_EXTENSOR_PEAK_TORQUE_60_DEG -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_51_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="KNEE_EXTENSOR_PEAK_TORQUE_60_DEG">
+	              </div>
+	          <!-- KNEE_EXTENSOR_PEAK_TORQUE_60_DEG -->
+						<!-- KNEE_FLEXOR_PEAK_TORQUE_60_DEG -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_52_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="KNEE_FLEXOR_PEAK_TORQUE_60_DEG">
+	              </div>
+	          <!-- KNEE_FLEXOR_PEAK_TORQUE_60_DEG -->
+						<!-- KNEE_EXTENSOR_PEAK_TORQUE_180_DEG -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_53_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="KNEE_EXTENSOR_PEAK_TORQUE_180_DEG">
+	              </div>
+	          <!-- KNEE_EXTENSOR_PEAK_TORQUE_180_DEG -->
+						<!-- KNEE_FLEXOR_PEAK_TORQUE_180_DEG -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_54_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="KNEE_FLEXOR_PEAK_TORQUE_180_DEG">
+	              </div>
+	          <!-- KNEE_FLEXOR_PEAK_TORQUE_180_DEG -->
+						<!-- KNEE_EXTENSOR_FATIGUE_RATIO_180_DEG -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_55_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="KNEE_EXTENSOR_FATIGUE_RATIO_180_DEG">
+	              </div>
+	          <!-- KNEE_EXTENSOR_FATIGUE_RATIO_180_DEG -->
+						<!-- KNEE_FLEXOR_FATIGUE_RATIO_180_DEG -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_56_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="KNEE_FLEXOR_FATIGUE_RATIO_180_DEG">
+	              </div>
+	          <!-- KNEE_FLEXOR_FATIGUE_RATIO_180_DEG -->
+
+						<!-- LT_KNEE_EXTENSOR_PEAK_TORQUE_60_DEG -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_57_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LT_KNEE_EXTENSOR_PEAK_TORQUE_60_DEG">
+	              </div>
+	          <!-- LT_KNEE_EXTENSOR_PEAK_TORQUE_60_DEG -->
+						<!-- LT_KNEE_FLEXOR_PEAK_TORQUE_60_DEG -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_58_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LT_KNEE_FLEXOR_PEAK_TORQUE_60_DEG">
+	              </div>
+	          <!-- LT_KNEE_FLEXOR_PEAK_TORQUE_60_DEG -->
+						<!-- LT_KNEE_EXTENSOR_PEAK_TORQUE_180_DEG -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_59_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LT_KNEE_EXTENSOR_PEAK_TORQUE_180_DEG">
+	              </div>
+	          <!-- LT_KNEE_EXTENSOR_PEAK_TORQUE_180_DEG -->
+						<!-- LT_KNEE_FLEXOR_PEAK_TORQUE_180_DEG -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_60_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LT_KNEE_FLEXOR_PEAK_TORQUE_180_DEG">
+	              </div>
+	          <!-- LT_KNEE_FLEXOR_PEAK_TORQUE_180_DEG -->
+						<!-- LT_KNEE_EXTENSOR_FATIGUE_RATIO_180_DEG -->
+	          <div class="formFieldWrap_2f">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_61_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LT_KNEE_EXTENSOR_FATIGUE_RATIO_180_DEG">
+	              </div>
+	          <!-- LT_KNEE_EXTENSOR_FATIGUE_RATIO_180_DEG -->
+						<!-- LT_KNEE_FLEXOR_FATIGUE_RATIO_180_DEG -->
+	          <div class="formFieldWrap_2">
+	          <label class="field-title contactNameField" for="contactNameField">
+	          <%= langPack.traning_plan_table_name_62_table_name %><span>*</span>
+	          </label>
+	              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="LT_KNEE_FLEXOR_FATIGUE_RATIO_180_DEG">
+	              </div>
+	          <!-- LT_KNEE_FLEXOR_FATIGUE_RATIO_180_DEG -->
+
+          </div>
+          <br/>

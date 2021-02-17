@@ -1,0 +1,22 @@
+{
+  "name": "allinjoy",
+  "version": "2.0.0",
+  "description": "All In Joy Training Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takleung/allinjoy.git"
+  },
+  "keywords": [
+    "allinjoy"
+  ],
+  "author": "Ray Yip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takleung/allinjoy/issues"
+  },
+  "homepage": "https://github.com/takleung/allinjoy#readme"
+}
